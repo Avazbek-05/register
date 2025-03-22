@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regeister and login</title>
+    <link rel="stylesheet" href="./src/output.css" />
+  </head>
+  <body class="bg-[url('/img/BMW.avif')] bg-no-repeat bg-cover">
+    <!-- form-container -->
+    <div
+      class="form-container bg-white w-[400px] p-7 rounded-xl shadow-[0_4px_6px_rgba(0,0,0,0.1)]"
+      id="register-container"
+    >
+      <h2 class="text-center text-2xl font-semibold">Ro'yxatdan o'tish</h2>
+      <form id="registerForm">
+        <!-- name -->
+        <label class="text-center text-lg font-normal" for="name"
+          >Isminggiz</label
+        >
+        <input
+          class="border-2 border-[#ddd] w-full p-2 rounded-md"
+          type="text"
+          name="name"
+          id="name"
+          required
+        />
+
+        <!-- email -->
+        <label class="text-center text-lg font-normal" for="email"
+          >Email manzilingiz</label
+        >
+        <input
+          class="border-2 border-[#ddd] w-full p-2 rounded-md"
+          type="email"
+          name="email"
+          id="email"
+          required
+        />
+
+        <!-- password -->
+        <label class="text-center text-lg font-normal" for="password"
+          >Parol</label
+        >
+        <input
+          class="border-2 border-[#ddd] w-full p-2 rounded-md"
+          type="password"
+          name="password"
+          id="password"
+          required
+        />
+
+        <label class="text-center text-lg font-normal" for="confirmpassword"
+          >Parol tasdiqlang</label
+        >
+        <input
+          class="border-2 border-[#ddd] w-full p-2 rounded-md"
+          type="password"
+          name="confirmPassword"
+          id="confirmPassword"
+          required
+        />
+        <button
+          class="mt-2.5 bg-[#4CAF50] border-none text-white w-full p-2.5 rounded-md cursor-pointer hover:bg-[#45a049]"
+          type="submit"
+        >
+          Ro'yxatdan o'tish
+        </button>
+      </form>
+      <p id="error-message" style="color: red"></p>
+    </div>
+
+    <!-- login container -->
+
+    <div
+      id="login-container"
+      class="bg-white hidden w-[400px] p-7 rounded-xl shadow-[0_4px_6px_rgba(0,0,0,0.1)]"
+    >
+      <h2 class="text-center text-2xl font-semibold">Kirish</h2>
+      <form id="loginForm">
+        <label class="text-center text-lg font-normal" for="loginEmail"
+          >Email manzilingiz</label
+        >
+        <input
+          type="email"
+          class="border-2 border-[#ddd] w-full p-2 rounded-md"
+          id="loginEmail"
+          name="loginEmail"
+          required
+        />
+
+        <label class="text-center text-lg font-normal" for="loginPassword"
+          >Email manzilingiz</label
+        >
+        <input
+          class="border-2 border-[#ddd] w-full p-2 rounded-md"
+          type="password"
+          id="loginPassword"
+          name="loginPassword"
+          required
+        />
+        <button
+          class="mt-2.5 bg-[#4CAF50] border-none text-white w-full p-2.5 rounded-md cursor-pointer hover:bg-[#45a049]"
+          type="submit"
+        >
+          Kirish
+        </button>
+      </form>
+    </div>
+    <script src="./register.js"></script>
+  </body>
+</html>
