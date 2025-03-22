@@ -1,9 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
+
   const form = document.getElementById("registerForm");
   const loginForm = document.getElementById("loginForm");
   const errorMessage = document.getElementById("error-message");
   const registerContainer = document.getElementById("register-container");
   const loginContainer = document.getElementById("login-container");
+
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -19,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (password !== confirmPassword) {
-      errorMessage.textContent = "Parol bir xil emas!";
+      errorMessage.textContent = "Parol bir xil emas !";
       return;
     }
 
@@ -27,6 +29,7 @@ document.addEventListener("DOMContentLoaded", function () {
       errorMessage.textContent = "Email noto'g'ri";
       return;
     }
+
     if (password.length < 6) {
       errorMessage.textContent = "Parol kamida 6 ta belgidan iborat bo'lishi kerak!";
       return;
@@ -40,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     localStorage.setItem("user", JSON.stringify(userData));
 
-    alert("Foydalanuvchi muvaffaqiyatli ro'yxatdan o'tdi");
+    alert("Foydalanuvchi muffaqiyatli ro'yxatdan o'tdi");
 
     registerContainer.style.display = "none";
     loginContainer.classList.remove("hidden");
@@ -49,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
     errorMessage.textContent = "";
   });
 
-  // login
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
@@ -60,7 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!storedUser) {
       alert("Avval ro'yxatdan o'ting");
+      return;
     }
+
     if (loginEmail === storedUser.email && loginPassword === storedUser.password) {
       alert("Kirish muvaffaqiyatli");
       window.location.href = "./dashbord.html";
@@ -68,4 +72,5 @@ document.addEventListener("DOMContentLoaded", function () {
       alert("Xatolik: Email yoki Parol noto'g'ri");
     }
   });
+
 });
