@@ -3,6 +3,7 @@ const loginForm = document.getElementById("loginForm");
 const errorMessage = document.getElementById("error-message");
 const registerContainer = document.getElementById("register-container");
 const loginContainer = document.getElementById("login-container");
+console.log("slom");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
